@@ -19,7 +19,7 @@ const CustomerLoginPage = () => {
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center vh-100" style={{ backgroundColor: '#f0f0f0' }}>
+    <Container className="d-flex flex-column align-items-center justify-content-center m-5" style={{ backgroundColor: '#f0f0f0' }}>
       <div className="text-center mb-4">
         <IoPersonCircleSharp size={67} style={{ color: '#8D0E0E' }} />
         <h1 className="mt-2">CUSTOMER</h1>

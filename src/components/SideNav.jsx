@@ -7,19 +7,19 @@ const SideNav = () => {
             <div style={styles.title}>Admin</div>
             <Nav className="flex-column">
                 <Nav.Item>
-                    <Button variant="outline-dark" style={styles.button}>
+                    <Button variant="dark" style={styles.button}>
                         <BsFillHouseDoorFill style={styles.icon} />
                         Dashboard
                     </Button>
                 </Nav.Item>
                 <Nav.Item>
-                    <Button variant="outline-dark" style={styles.button}>
+                    <Button variant="dark" style={styles.button}>
                         <BsFileEarmarkText style={styles.icon} />
                         Print Reports
                     </Button>
                 </Nav.Item>
                 <Nav.Item>
-                    <Button variant="outline-dark" style={styles.button}>
+                    <Button variant="dark" style={styles.button}>
                         <BsGearWideConnected style={styles.icon} />
                         Settings
                     </Button>
@@ -32,10 +32,9 @@ const SideNav = () => {
 const styles = {
     container: {
         width: '250px',
-        height: 'calc(100vh - 300px)', // Adjust as per your header and footer height
-        position: 'sticky',
-        top: '95px', // Adjust top position to clear the header
-        bottom: '15px',
+        position: 'fixed',
+        top: '105px', // Adjust top position to clear the header
+        bottom: '150px', // Adjust bottom position to clear the footer
         left: '10px',
         backgroundColor: '#343a40',
         color: 'white',
@@ -43,6 +42,7 @@ const styles = {
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
         overflowY: 'auto', // Enable scrolling if content exceeds sidebar height
         borderRadius: '10px', // Border radius for rounded corners
+        zIndex: 1000, // Ensure sidebar is above other content
     },
     title: {
         fontSize: '24px',

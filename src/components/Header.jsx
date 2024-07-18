@@ -9,7 +9,7 @@ import '../Welcome.css'
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedRole, setSelectedRole] = useState('Administrator');
+  const [selectedRole, setSelectedRole] = useState(null);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaUserShield, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Container, Form, Button, InputGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AdminLoginPage = () => {
   const [username, setUsername] = useState('');
@@ -18,7 +19,7 @@ const AdminLoginPage = () => {
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center vh-100" style={{ backgroundColor: '#f0f0f0' }}>
+    <Container className="d-flex flex-column align-items-center justify-content-center m-5" style={{ backgroundColor: '#f0f0f0' }}>
       <div className="text-center mb-4">
         <FaUserShield size={64} style={{ color: '#8D0E0E' }} />
         <h1 className="mt-2">ADMINISTRATOR</h1>
@@ -49,7 +50,7 @@ const AdminLoginPage = () => {
             </Button>
           </InputGroup>
         </Form.Group>
-        <Button variant="dark" type="submit" className="w-100 mb-3 bg-color-2">Proceed</Button>
+        <Button as={Link} to='./AdminDashboard' variant="dark" type="submit" className="w-100 mb-3 bg-color-2">Proceed</Button>
       </Form>
       <Button variant="link" onClick={() => alert('Back button clicked')} className="text-dark">Back</Button>
     </Container>
